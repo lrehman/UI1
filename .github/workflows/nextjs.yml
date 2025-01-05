@@ -42,10 +42,6 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -56,8 +52,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Debug ESLint
+        run: cat next.config.js
       - name: Build with Next.js
-        run: NEXT_PUBLIC_ESLINT_IGNORE=true ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build --no-eslint
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
