@@ -44,7 +44,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="flex justify-center">
           <img
-            src="/logo.png" // Replace with the actual path to your logo
+            src="./logo.png" // Replace with the actual path to your logo
             alt="Logo"
             className="w-35 h-20"
           />

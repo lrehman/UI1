@@ -27,7 +27,7 @@ export default function LandingPage() {
       }`}
     >
       <img
-        src="/logo.png"
+        src="./logo.png"
         alt="Landing Logo"
         className="w-120 h-96 border-4 border-black rounded-lg animate-zoom-in"
       />
