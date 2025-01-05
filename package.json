@@ -1,5 +1,5 @@
 {
-  "homepage": "http://lrehman.gitlab.io/ba",
+  "homepage": "https://lrehman.gitlab.io/ui1",
   "name": "ai-tool1",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +10,7 @@
   "start": "next start",
   "lint": "next lint",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d .next -r https://gitlab.rlp.net/lrehman/ba.git"
+  "deploy": "gh-pages -d out -r https://github.com/lrehman/UI1.git"
 },
   "dependencies": {
     "axios": "^1.7.8",
