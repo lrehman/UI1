@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
     
   },
     output: 'export', // Enable static export
-    trailingSlash: true,
-    basePath: '/ba', // Update with your GitLab project name
+    
 };
 
 export default nextConfig;
